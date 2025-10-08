@@ -1,10 +1,17 @@
-import { StyleSheet } from "react-native/types_generated/index";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, Text, View, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function A() {
+    const navigation = useNavigation();
+
     return (
-        <View style={StyleSheet.container}>
-            <Text>A page</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <View style={StyleSheet.container}>
+                <Text>A page</Text>
+                <Button title="To B" onPress={() => navigation.navigate('B')} />
+            </View>
+        </SafeAreaView>
     )
 }
 

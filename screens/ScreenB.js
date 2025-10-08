@@ -1,10 +1,13 @@
-import { StyleSheet } from "react-native/types_generated/index";
+import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function B() {
     return (
-        <View style={StyleSheet.container}>
-            <Text>B page</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <View style={StyleSheet.container}>
+                <Text>B page</Text>
+            </View>
+        </SafeAreaView>
     )
 }
 
